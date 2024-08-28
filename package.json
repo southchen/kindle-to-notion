@@ -1,4 +1,7 @@
 {
+  "name": "southchen/kindle-to-notion",
+  "author": "Abdur Rahman arkalim, Nan Chen",
+  "version": "1.0.0",
   "scripts": {
     "start": "node dist/main.js",
     "build": "tsc",
