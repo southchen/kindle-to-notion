@@ -28,12 +28,11 @@
 - Connect your **Kindle** E-Reader to your computer. Navigate to `Kindle` ➡ `documents` and copy `My Clippings.txt`. 
 
 - Create a GitHub repository and add your `My Clippings.txt` to the root of the repository. Now, add a file `sync.yaml` to the repository at location `.github/workflows` with the following content:
-  ```
+  
+```
  name: Sync Kindle Highlights
-
-on: [push, workflow_dispatch]
-
-jobs:
+ on: [push, workflow_dispatch]
+ jobs:
   sync-highlights:
     runs-on: ubuntu-latest
     steps:
