@@ -5,7 +5,7 @@ import { writeToFile, readFromFile, formatAuthorName } from "../utils";
 export class Parser {
   private fileName = "My Clippings.txt";
   private regex =
-    /(.+) \((.+)\)\r*\n- (?:Seu destaque|Your Highlight|La subrayado|Your Note|Deine Markierung|\u60a8\u5728\u7b2c|\u60a8\u5728\u4f4d)(.+)\r*\n\r*\n(.+)/gm;
+    /(.+) \((.+)\)\r*\n- (?:Your Highlight|La subrayado|Your Note|Deine Markierung|\u60a8\u5728\u7b2c|\u60a8\u5728\u4f4d)(.+)\r*\n\r*\n(.+)/gm;
   private splitter = /=+\r*\n/gm;
   private nonUtf8 = /\uFEFF/gmu;
   private clippings: Clipping[] = [];
@@ -13,7 +13,7 @@ export class Parser {
 
   /* Method to print the stats of Clippings read from My Clippings.txt */
   printStats = () => {
-    console.log("\n💹 Stats for Clippings");
+    console.log("\n💹 Stats for Clippings:");
     for (const groupedClipping of this.groupedClippings) {
       console.log("--------------------------------------");
       console.log(`📝 Title: ${groupedClipping.title}`);
