@@ -1,7 +1,7 @@
 require("dotenv").config();
 import { NotionAdapter } from "../adapters";
 import { GroupedClipping } from "../interfaces";
-import { CreatePageParams, Emoji, BlockType } from "../interfaces";
+import { CreatePageParams, BlockType } from "../interfaces";
 import {
   makeHighlightsBlocks,
   updateSync,
